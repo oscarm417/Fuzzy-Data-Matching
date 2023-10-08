@@ -16,9 +16,9 @@ duplicateRecordsMatched = fuzzy_compare_dataframes(hireMe, hired, deduping_cols1
 
 
 Example 2: 
-Lets say we want to identify people that submitted multiple submissions to settlement that only allows one submission per person. 
-In many instances, people to try to submit many times, will submit many time with very small changes, as so to be considered different people, 
-but still cash the checks for themselves, as if those off names were data entry mistakes. 
+Lets say we want to identify people that submited multiple submissions to a settlement that only allows one submission per person. 
+In many instances, people trying to submit many times, will submit many times with very small changes, as so to be considered different people, 
+but still be able to cash the checks.
 
 df = pd.read_excel("submissions.xlsx", dtype =str).fillna("")
 duplicateRecordsMarked = fuzzy_dedupe_main(df,deduping_cols1 = ['FirstName','LastName'],percent_match = .9)
