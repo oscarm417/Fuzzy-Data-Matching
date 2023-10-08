@@ -20,7 +20,7 @@ In many instances, people to try to submit many times, will submit many time wit
 but still cash the checks for themselves, as if those off names were data entry mistakes. 
 
 df = pd.read_excel("submissions.xlsx", dtype =str).fillna("")
-duplicateRecordsMarked = fuzzy_dedupe_main(df,deduping_cols1 = ['FirstName','LastName'],percent_match = .9):
+duplicateRecordsMarked = fuzzy_dedupe_main(df,deduping_cols1 = ['FirstName','LastName'],percent_match = .9)
 #At this point all duplicate records will be matched with a unique id, and a rank value. The rank value identies the order in which that duplicate record was found. 
 #So the first duplicate record will be marked as Rank = 1
 
