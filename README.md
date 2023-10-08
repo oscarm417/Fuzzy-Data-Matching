@@ -12,7 +12,7 @@ hireMe = pd.read_excel("hireMe.xlsx", dtype =str).fillna("")
 hired = pd.read_excel("peopleHired.xslx", dtype =str).fillna("")
 duplicateRecordsMatched = fuzzy_compare_dataframes(hireMe, hired, deduping_cols1 = ['Name','Email','Address'],deduping_cols2 = ['Name','Email','Address'], fuzzy_percentage = .95)
 
-#This will give you the duplicate records, based on teh 95% match. 
+#This will give you the duplicate records, based on the 95% match. 
 
 
 Example 2: 
